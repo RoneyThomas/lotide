@@ -19,9 +19,7 @@ const assertArraysEqual = (array1, array2) => {
 };
 
 const without = (array1, array2) => {
-  let result = [];
-  result = array1.filter(item => !array2.includes(item));
-  return result;
+  return array1.filter(item => !array2.includes(item));
 };
 
 const words = ["hello", "world", "lighthouse", "roney"];
