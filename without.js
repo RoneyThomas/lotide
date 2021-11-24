@@ -20,15 +20,12 @@ const assertArraysEqual = (array1, array2) => {
 
 const without = (array1, array2) => {
   let result = [];
-  for (let obj of array1) {
-    if (!array2.includes(obj)) {
-      result.push(obj);
-    }
-  }
+  result = array1.filter(item => !array2.includes(item));
   return result;
-}
+};
 
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
+const words = ["hello", "world", "lighthouse", "roney"];
+without(words, ["lighthouse", "roney"]); // no need to capture return value for this test case
 // Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+console.log(without(words, ["lighthouse", "roney"]));
+assertArraysEqual(words, ["hello", "world", "lighthouse", "roney"]);
