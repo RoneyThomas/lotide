@@ -8,14 +8,6 @@ const eqArrays = (array1, array2) => {
     }
   }
   return true;
-}
-
-const assertEqual = (array1, array2) => {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
 };
 
-assertEqual(eqArrays([1, 2], [1, 2]), true); // => should PASS
+module.exports = eqArrays;
